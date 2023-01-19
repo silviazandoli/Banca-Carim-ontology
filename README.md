@@ -1,5 +1,5 @@
 # Banca-Carim-ontology
-Creation of a bank ontology
+Ontologia di una banca
 
 Tecnologie
 
