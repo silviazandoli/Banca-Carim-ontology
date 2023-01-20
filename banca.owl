@@ -89,6 +89,13 @@
                 rdfs:range :Personale .
 
 
+###  http://bancacarim.com/ontologies/carim#deveSottomettere
+:deveSottomettere rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain :Conto ;
+                  rdfs:range :DocumentoDelCliente .
+
+
 ###  http://bancacarim.com/ontologies/carim#docGestitiDa
 :docGestitiDa rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ;
@@ -172,6 +179,14 @@
              rdfs:comment "il cliente restituisce il denaro prestatogli" .
 
 
+###  http://bancacarim.com/ontologies/carim#haPersonale
+:haPersonale rdf:type owl:ObjectProperty ;
+             owl:inverseOf :èPersonaleDi ;
+             rdf:type owl:AsymmetricProperty ;
+             rdfs:domain :Filiale ;
+             rdfs:range :Personale .
+
+
 ###  http://bancacarim.com/ontologies/carim#haPersonaleManageriale
 :haPersonaleManageriale rdf:type owl:ObjectProperty ;
                         owl:inverseOf :èPersonaleManagerialeDi ;
@@ -180,9 +195,23 @@
                         rdfs:range :PersonaleManageriale .
 
 
+###  http://bancacarim.com/ontologies/carim#haPrelevatoDa
+:haPrelevatoDa rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain :ClientePerDeposito ;
+               rdfs:range :ContoDiDeposito .
+
+
 ###  http://bancacarim.com/ontologies/carim#homeBankingDi
 :homeBankingDi rdf:type owl:ObjectProperty ,
                         owl:AsymmetricProperty .
+
+
+###  http://bancacarim.com/ontologies/carim#prestitoApprovatoDa
+:prestitoApprovatoDa rdf:type owl:ObjectProperty ,
+                              owl:AsymmetricProperty ;
+                     rdfs:domain :ContoDiPrestito ;
+                     rdfs:range :PersonaleManageriale .
 
 
 ###  http://bancacarim.com/ontologies/carim#vicinoA
@@ -190,6 +219,12 @@
          rdfs:domain :Fermata ;
          rdfs:range :Filiale ;
          rdfs:comment "identifica la/le fermate di autobus vicino a una filiale" .
+
+
+###  http://bancacarim.com/ontologies/carim#èPersonaleDi
+:èPersonaleDi rdf:type owl:ObjectProperty ;
+              rdfs:domain :Personale ;
+              rdfs:range :Filiale .
 
 
 ###  http://bancacarim.com/ontologies/carim#èPersonaleManagerialeDi
@@ -201,12 +236,6 @@
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://bancacarim.com/ontologies/carim#bilancio_conto
-:bilancio_conto rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Conto ;
-                rdfs:range xsd:float .
-
 
 ###  http://bancacarim.com/ontologies/carim#codiceBanca
 :codiceBanca rdf:type owl:DatatypeProperty ;
@@ -233,6 +262,12 @@
            rdfs:comment "Id per fermata" .
 
 
+###  http://bancacarim.com/ontologies/carim#id_number
+:id_number rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Persona ;
+           rdfs:range xsd:string .
+
+
 ###  http://bancacarim.com/ontologies/carim#latitudine_banca
 :latitudine_banca rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Banca ;
@@ -249,6 +284,12 @@
 :latitudine_filiale rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Filiale ;
                     rdfs:range owl:real .
+
+
+###  http://bancacarim.com/ontologies/carim#locazione_chiosco
+:locazione_chiosco rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Chiosco ;
+                   rdfs:range xsd:string .
 
 
 ###  http://bancacarim.com/ontologies/carim#longitudine_banca
@@ -287,6 +328,18 @@
              rdfs:range xsd:string .
 
 
+###  http://bancacarim.com/ontologies/carim#nome_carta
+:nome_carta rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Carta ;
+            rdfs:range xsd:string .
+
+
+###  http://bancacarim.com/ontologies/carim#nome_conto
+:nome_conto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Conto ;
+            rdfs:range xsd:string .
+
+
 ###  http://bancacarim.com/ontologies/carim#numeroAutobus
 :numeroAutobus rdf:type owl:DatatypeProperty ;
                rdfs:domain :Fermata ;
@@ -298,6 +351,24 @@
 :numero_assegno rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Assegno ;
                 rdfs:range xsd:int .
+
+
+###  http://bancacarim.com/ontologies/carim#numero_carta
+:numero_carta rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Carta ;
+              rdfs:range xsd:int .
+
+
+###  http://bancacarim.com/ontologies/carim#numero_conto
+:numero_conto rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Conto ;
+              rdfs:range xsd:int .
+
+
+###  http://bancacarim.com/ontologies/carim#saldo_conto
+:saldo_conto rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Conto ;
+             rdfs:range xsd:float .
 
 
 #################################################################
@@ -390,19 +461,72 @@
 
 ###  http://bancacarim.com/ontologies/carim#Conto
 :Conto rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :haFiliale ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Filiale
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :nome_conto ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :numero_conto ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:int
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :saldo_conto ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ;
        owl:disjointWith :Persona .
 
 
 ###  http://bancacarim.com/ontologies/carim#ContoCorrente
 :ContoCorrente rdf:type owl:Class ;
-               rdfs:subClassOf :ContoDiDeposito ;
+               rdfs:subClassOf :ContoDiDeposito ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ContoDiDepositoDi ;
+                                 owl:someValuesFrom :AltroRisparmiatore
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ContoDiDepositoDi ;
+                                 owl:someValuesFrom :BambinoRisparmiatore
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ContoDiDepositoDi ;
+                                 owl:someValuesFrom :GiovaneRisparmiatore
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ContoDiDepositoDi ;
+                                 owl:someValuesFrom :SeniorRisparmiatore
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :haCarta ;
+                                 owl:someValuesFrom :Carta
+                               ] ;
                rdfs:comment """Il conto corrente bancario è uno strumento per la gestione del denaro.
 È identificato dalle coordinate bancarie IBAN che ti permettono di gestirlo agevolmente.""" .
 
 
 ###  http://bancacarim.com/ontologies/carim#ContoDiDeposito
 :ContoDiDeposito rdf:type owl:Class ;
-                 rdfs:subClassOf :Conto ;
+                 rdfs:subClassOf :Conto ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :deveSottomettere ;
+                                   owl:someValuesFrom :DocumentazionePersonaleCliente
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :deveSottomettere ;
+                                   owl:someValuesFrom :DocumentoInvestimentiEServizi
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :contoApertoDa ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :DirettoreFiliale
+                                 ] ;
                  owl:disjointWith :ContoDiPrestito ;
                  rdfs:comment "Il conto deposito corrisponde a un deposito a risparmio e ti permette di fare operazioni semplici, come versamenti e prelievi." .
 
@@ -431,7 +555,11 @@
 
 ###  http://bancacarim.com/ontologies/carim#DepositoBambini
 :DepositoBambini rdf:type owl:Class ;
-                 rdfs:subClassOf :DepositoDiRisparmio .
+                 rdfs:subClassOf :DepositoDiRisparmio ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :ContoDiDepositoDi ;
+                                   owl:someValuesFrom :BambinoRisparmiatore
+                                 ] .
 
 
 ###  http://bancacarim.com/ontologies/carim#DepositoDiRisparmio
@@ -441,23 +569,59 @@
 
 ###  http://bancacarim.com/ontologies/carim#DepositoFisso
 :DepositoFisso rdf:type owl:Class ;
-               rdfs:subClassOf :ContoDiDeposito ;
+               rdfs:subClassOf :ContoDiDeposito ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ContoDiDepositoDi ;
+                                 owl:someValuesFrom :ClientePerDeposito
+                               ] ;
                rdfs:comment "Un deposito fisso è uno strumento finanziario che offre agli investitori un tasso di interesse più elevato rispetto a un normale conto di risparmio, fino alla data di scadenza indicata." .
 
 
 ###  http://bancacarim.com/ontologies/carim#DepositoGenerico
 :DepositoGenerico rdf:type owl:Class ;
-                  rdfs:subClassOf :DepositoDiRisparmio .
+                  rdfs:subClassOf :DepositoDiRisparmio ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :ContoDiDepositoDi ;
+                                    owl:someValuesFrom :AltroRisparmiatore
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :ContoDiDepositoDi ;
+                                    owl:someValuesFrom :GiovaneRisparmiatore
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :ContoDiDepositoDi ;
+                                    owl:someValuesFrom :SeniorRisparmiatore
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :haCarta ;
+                                    owl:someValuesFrom :Carta
+                                  ] .
 
 
 ###  http://bancacarim.com/ontologies/carim#DepositoGiovani
 :DepositoGiovani rdf:type owl:Class ;
-                 rdfs:subClassOf :DepositoDiRisparmio .
+                 rdfs:subClassOf :DepositoDiRisparmio ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :ContoDiDepositoDi ;
+                                   owl:someValuesFrom :GiovaneRisparmiatore
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :haCarta ;
+                                   owl:someValuesFrom :Carta
+                                 ] .
 
 
 ###  http://bancacarim.com/ontologies/carim#DepositoSenior
 :DepositoSenior rdf:type owl:Class ;
-                rdfs:subClassOf :DepositoDiRisparmio .
+                rdfs:subClassOf :DepositoDiRisparmio ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :ContoDiDepositoDi ;
+                                  owl:someValuesFrom :SeniorRisparmiatore
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :haCarta ;
+                                  owl:someValuesFrom :Carta
+                                ] .
 
 
 ###  http://bancacarim.com/ontologies/carim#Direttore
@@ -697,6 +861,15 @@
   owl:members ( :ContoCorrente
                 :DepositoDiRisparmio
                 :DepositoFisso
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DepositoBambini
+                :DepositoGenerico
+                :DepositoGiovani
+                :DepositoSenior
               )
 ] .
 
