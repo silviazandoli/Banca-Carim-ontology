@@ -49,7 +49,6 @@
          rdf:type owl:AsymmetricProperty .
 
 
-
 ###  http://bancacarim.com/ontologies/carim#haConto
 :haConto rdf:type owl:ObjectProperty ,
                   owl:AsymmetricProperty .
@@ -86,39 +85,14 @@
 
 ###  http://bancacarim.com/ontologies/carim#vicinoA
 :vicinoA rdf:type owl:ObjectProperty ;
-         rdfs:domain :Autobus ,
-                     :Banca ,
-                     :Filiale ;
+         rdfs:domain :Fermata ;
+         rdfs:range :Filiale ;
          rdfs:comment "identifica la/le fermate di autobus vicino a una filiale" .
 
 
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://bancacarim.com/ontologies/carim#Latitudine
-:Latitudine rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Autobus ,
-                        :Banca ,
-                        :Filiale ;
-            rdfs:range <https://schema.org/latitude> .
-
-
-###  http://bancacarim.com/ontologies/carim#Longitudine
-:Longitudine rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Autobus ,
-                         :Banca ,
-                         :Filiale ;
-             rdfs:range <https://schema.org/longitude> .
-
-
-###  http://bancacarim.com/ontologies/carim#andata
-:andata rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Autobus ;
-        rdfs:range xsd:boolean ;
-        rdfs:comment """Identifica se una tratta è andata o ritorno:
-True se andata, False se ritorno""" .
-
 
 ###  http://bancacarim.com/ontologies/carim#codiceBanca
 :codiceBanca rdf:type owl:DatatypeProperty ;
@@ -138,25 +112,47 @@ True se andata, False se ritorno""" .
          rdfs:range xsd:string .
 
 
-###  http://bancacarim.com/ontologies/carim#haAccessoPerDisabili
-:haAccessoPerDisabili rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :Autobus ,
-                                  :Banca ,
-                                  :Filiale ;
-                      rdfs:range xsd:boolean .
-
-
 ###  http://bancacarim.com/ontologies/carim#idFermata
 :idFermata rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Autobus ;
-           rdfs:range xsd:string ;
+           rdfs:domain :Fermata ;
+           rdfs:range xsd:int ;
            rdfs:comment "Id per fermata" .
 
 
-###  http://bancacarim.com/ontologies/carim#idViaggio
-:idViaggio rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Autobus ;
-           rdfs:range xsd:string .
+###  http://bancacarim.com/ontologies/carim#latitudine_banca
+:latitudine_banca rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Banca ;
+                  rdfs:range <https://schema.org/latitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#latitudine_fermata_autobus
+:latitudine_fermata_autobus rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Fermata ;
+                            rdfs:range <https://schema.org/latitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#latitudine_filiale
+:latitudine_filiale rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Filiale ;
+                    rdfs:range owl:real .
+
+
+###  http://bancacarim.com/ontologies/carim#longitudine_banca
+:longitudine_banca rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Banca ;
+                   rdfs:range <https://schema.org/longitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#longitudine_fermata_autobus
+:longitudine_fermata_autobus rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Fermata ;
+                             rdfs:range <https://schema.org/longitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#longitudine_filiale
+:longitudine_filiale rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Filiale ;
+                     rdfs:range owl:real .
 
 
 ###  http://bancacarim.com/ontologies/carim#nome
@@ -167,30 +163,26 @@ True se andata, False se ritorno""" .
 
 ###  http://bancacarim.com/ontologies/carim#nomeBanca
 :nomeBanca rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Banca ,
-                       :Filiale ;
+           rdfs:domain :Banca ;
            rdfs:range xsd:string .
 
 
 ###  http://bancacarim.com/ontologies/carim#nomeFermata
 :nomeFermata rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Autobus ;
+             rdfs:domain :Fermata ;
              rdfs:range xsd:string .
 
 
 ###  http://bancacarim.com/ontologies/carim#numeroAutobus
 :numeroAutobus rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Autobus ;
-               rdfs:range xsd:int .
+               rdfs:domain :Fermata ;
+               rdfs:range xsd:int ;
+               rdfs:comment "Quanti autobus passano per quella fermata" .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://bancacarim.com/ontologies/carim#Autobus
-:Autobus rdf:type owl:Class .
-
 
 ###  http://bancacarim.com/ontologies/carim#Banca
 :Banca rdf:type owl:Class ;
@@ -269,6 +261,10 @@ True se andata, False se ritorno""" .
                 rdfs:subClassOf :DepositoDiRisparmio .
 
 
+###  http://bancacarim.com/ontologies/carim#Fermata
+:Fermata rdf:type owl:Class .
+
+
 ###  http://bancacarim.com/ontologies/carim#Filiale
 :Filiale rdf:type owl:Class ;
          rdfs:comment "Una filiale della banca, può essere in città ma anche fuori" .
@@ -304,29 +300,40 @@ True se andata, False se ritorno""" .
 ###  http://bancacarim.com/ontologies/carim#banca_carim_centrale
 :banca_carim_centrale rdf:type owl:NamedIndividual ,
                                :Banca ;
-                      :Latitudine "44.05850019469059"^^<https://schema.org/latitude> ;
-                      :Longitudine "12.569381148407373"^^<https://schema.org/longitude> .
+                      :latitudine_banca 44.05850019469059 ;
+                      :longitudine_banca 12.569381148407373 ;
+                      :nomeBanca "Carim"^^xsd:string .
+
+
+###  http://bancacarim.com/ontologies/carim#fermata_01
+:fermata_01 rdf:type owl:NamedIndividual ,
+                     :Fermata ;
+            :vicinoA :filiale_miramare ;
+            :idFermata "682"^^xsd:int ;
+            :latitudine_fermata_autobus 44.03223090615619 ;
+            :longitudine_fermata_autobus 12.62069571694706 ;
+            :numeroAutobus "15"^^xsd:int .
 
 
 ###  http://bancacarim.com/ontologies/carim#filiale_bellariva
 :filiale_bellariva rdf:type owl:NamedIndividual ,
                             :Filiale ;
-                   :Latitudine "44.0451121907017"^^<https://schema.org/latitude> ;
-                   :Longitudine "12.595263605781346"^^<https://schema.org/longitude> .
+                   :latitudine_filiale 44.0451121907017 ;
+                   :longitudine_filiale 12.595263605781346 .
 
 
 ###  http://bancacarim.com/ontologies/carim#filiale_marinaCentro
 :filiale_marinaCentro rdf:type owl:NamedIndividual ,
                                :Filiale ;
-                      :Latitudine "44.07139653865241"^^<https://schema.org/latitude> ;
-                      :Longitudine "12.577204118932356"^^<https://schema.org/longitude> .
+                      :latitudine_filiale 44.07139653865241 ;
+                      :longitudine_filiale 12.577204118932356 .
 
 
 ###  http://bancacarim.com/ontologies/carim#filiale_miramare
 :filiale_miramare rdf:type owl:NamedIndividual ,
                            :Filiale ;
-                  :Latitudine "44.03170006196578"^^<https://schema.org/latitude> ;
-                  :Longitudine "12.620908767291468"^^<https://schema.org/longitude> .
+                  :latitudine_filiale 44.03170006196578 ;
+                  :longitudine_filiale 12.620908767291468 .
 
 
 #################################################################
