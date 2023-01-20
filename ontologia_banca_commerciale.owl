@@ -49,17 +49,6 @@
          rdf:type owl:AsymmetricProperty .
 
 
-###  http://bancacarim.com/ontologies/carim#coordinate
-:coordinate rdf:type owl:ObjectProperty ;
-            rdfs:domain [ rdf:type owl:Restriction ;
-                          owl:onProperty :Longitudine ;
-                          owl:someValuesFrom <https://schema.org/GeoCoordinates>
-                        ] ;
-            rdfs:range :Autobus ,
-                       :Banca ,
-                       :Filiale ;
-            rdfs:comment "identifica latitudine e longitudine di filiale, banca e autobus" .
-
 
 ###  http://bancacarim.com/ontologies/carim#haConto
 :haConto rdf:type owl:ObjectProperty ,
@@ -74,8 +63,7 @@
 
 ###  http://bancacarim.com/ontologies/carim#haContoTitoli
 :haContoTitoli rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :haConto ;
-               rdfs:comment "" .
+               rdfs:subPropertyOf :haConto .
 
 
 ###  http://bancacarim.com/ontologies/carim#haFiliale
@@ -107,6 +95,14 @@
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://bancacarim.com/ontologies/carim#Latitudine
+:Latitudine rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Autobus ,
+                        :Banca ,
+                        :Filiale ;
+            rdfs:range <https://schema.org/latitude> .
+
 
 ###  http://bancacarim.com/ontologies/carim#Longitudine
 :Longitudine rdf:type owl:DatatypeProperty ;
@@ -299,6 +295,38 @@ True se andata, False se ritorno""" .
 ###  http://bancacarim.com/ontologies/carim#Personale
 :Personale rdf:type owl:Class ;
            rdfs:subClassOf :Persona .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://bancacarim.com/ontologies/carim#banca_carim_centrale
+:banca_carim_centrale rdf:type owl:NamedIndividual ,
+                               :Banca ;
+                      :Latitudine "44.05850019469059"^^<https://schema.org/latitude> ;
+                      :Longitudine "12.569381148407373"^^<https://schema.org/longitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#filiale_bellariva
+:filiale_bellariva rdf:type owl:NamedIndividual ,
+                            :Filiale ;
+                   :Latitudine "44.0451121907017"^^<https://schema.org/latitude> ;
+                   :Longitudine "12.595263605781346"^^<https://schema.org/longitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#filiale_marinaCentro
+:filiale_marinaCentro rdf:type owl:NamedIndividual ,
+                               :Filiale ;
+                      :Latitudine "44.07139653865241"^^<https://schema.org/latitude> ;
+                      :Longitudine "12.577204118932356"^^<https://schema.org/longitude> .
+
+
+###  http://bancacarim.com/ontologies/carim#filiale_miramare
+:filiale_miramare rdf:type owl:NamedIndividual ,
+                           :Filiale ;
+                  :Latitudine "44.03170006196578"^^<https://schema.org/latitude> ;
+                  :Longitudine "12.620908767291468"^^<https://schema.org/longitude> .
 
 
 #################################################################
