@@ -805,6 +805,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Carta"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Il conto corrente bancario è uno strumento per la gestione del denaro.
+È identificato dalle coordinate bancarie IBAN che ti permettono di gestirlo agevolmente.</rdfs:comment>
     </owl:Class>
     
 
@@ -833,6 +835,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoDiPrestito"/>
+        <rdfs:comment>Il conto deposito corrisponde a un deposito a risparmio e ti permette di fare operazioni semplici, come versamenti e prelievi.</rdfs:comment>
     </owl:Class>
     
 
@@ -853,6 +856,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DocumentoCliente"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>E&apos; un prestito. Per semplicità è modellato come un conto di prestito</rdfs:comment>
     </owl:Class>
     
 
@@ -903,6 +907,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Un deposito fisso è uno strumento finanziario che offre agli investitori un tasso di interesse più elevato rispetto a un normale conto di risparmio, fino alla data di scadenza indicata.</rdfs:comment>
     </owl:Class>
     
 
@@ -1055,6 +1060,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PersonaleNonManageriale"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Documentazione generica della banca</rdfs:comment>
     </owl:Class>
     
 
@@ -1063,6 +1069,7 @@
 
     <owl:Class rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DocumentoCliente">
         <rdfs:subClassOf rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Documento"/>
+        <rdfs:comment>Documentazione che la banca dà al cliente per i servizi offerti</rdfs:comment>
     </owl:Class>
     
 
@@ -1079,6 +1086,7 @@
 
     <owl:Class rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DocumentoInvestimentoEServizi">
         <rdfs:subClassOf rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DocumentoCliente"/>
+        <rdfs:comment>documentazione inerente ai servizi e agli investimenti per il cliente</rdfs:comment>
     </owl:Class>
     
 
@@ -1400,6 +1408,7 @@
     <owl:Class rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere">
         <rdfs:subClassOf rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PersonaleNonManageriale"/>
         <owl:disjointWith rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
+        <rdfs:comment>Si tratta del vero e proprio “cassiere” della banca ed è quella figura professionale che funge da primo contatto con il cliente.</rdfs:comment>
     </owl:Class>
     
 
@@ -1427,7 +1436,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elpitiya</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Miramare</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1436,7 +1445,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moratuwa</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Lucca</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1445,7 +1454,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kandy</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Cesena Centro</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1454,7 +1463,27 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kandy</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Cesena Barriera</bancacarim:locazione_chiosco>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario_01">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario"/>
+        <bancacarim:appartieneA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_01"/>
+        <bancacarim:numero_assegno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_assegno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario_02">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario"/>
+        <bancacarim:appartieneA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_08"/>
+        <bancacarim:numero_assegno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_assegno>
     </owl:NamedIndividual>
     
 
@@ -1473,9 +1502,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayawardana</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eshan</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blu</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matilde</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1484,9 +1513,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajapaksha</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Randunu</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cione</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1496,7 +1525,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pansidu</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matilde</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1505,7 +1534,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samarawidawakara</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samara</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malindu</bancacarim:nome>
     </owl:NamedIndividual>
     
@@ -1527,7 +1556,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_06">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galapaththi</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galapato</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amila</bancacarim:nome>
     </owl:NamedIndividual>
     
@@ -1541,9 +1570,9 @@
         <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_01"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_01"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhubashini</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beoncini</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0001v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavithra</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tommasino</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1554,9 +1583,9 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BambinoRisparmiatore"/>
         <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_02"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhumal</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zandolai</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0002v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Achintha</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvia</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1567,9 +1596,9 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BambinoRisparmiatore"/>
         <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_03"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranawaka</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cicciolini</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0003v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yashoda</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolino</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1582,27 +1611,7 @@
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBambini_04"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0004v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thushani</bancacarim:nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
-        <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_01"/>
-        <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_01"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_02"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_1"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_01"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_02"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_01"/>
-        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_02"/>
-        <bancacarim:codice_banca rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bancacarim:codice_banca>
-        <bancacarim:nome_banca rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banca Carim</bancacarim:nome_banca>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsunai</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1611,7 +1620,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moratuwa</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Miramare</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1620,7 +1629,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elpitiya</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale_Lucca</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1629,7 +1638,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kandy</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Cesena Centro</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1638,7 +1647,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM"/>
-        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gampola</bancacarim:locazione_chiosco>
+        <bancacarim:locazione_chiosco rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filiale Cesena Barriera</bancacarim:locazione_chiosco>
     </owl:NamedIndividual>
     
 
@@ -1753,6 +1762,26 @@
     
 
 
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
+        <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
+        <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_01"/>
+        <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_01"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_02"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_1"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_01"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_02"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_01"/>
+        <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_02"/>
+        <bancacarim:codice_banca rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bancacarim:codice_banca>
+        <bancacarim:nome_banca rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banca Carim</bancacarim:nome_banca>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioSanMiniato -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioSanMiniato">
@@ -1781,6 +1810,8 @@
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_03"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_04"/>
+        <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_03"/>
+        <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_04"/>
         <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_05"/>
         <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_06"/>
         <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_3"/>
@@ -1799,8 +1830,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dissanaike</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jagath</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neri</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1810,7 +1841,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ekanaike</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erachide</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gamunu</bancacarim:nome>
     </owl:NamedIndividual>
     
@@ -1822,7 +1853,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damith</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danilo</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1833,7 +1864,18 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dushan</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diana</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_05">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
+        <bancacarim:cognome>Rossi</bancacarim:cognome>
+        <bancacarim:nome>Gianni</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1846,9 +1888,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_01"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_01"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayasekara</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeCarolis</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0021v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lahiru</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laura</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1861,7 +1903,7 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoCasa_01"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Mutuo_01"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoCasa_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeeGenericoRisparmiatoretha</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generico</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0022v</bancacarim:id_persona>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nipun</bancacarim:nome>
     </owl:NamedIndividual>
@@ -1878,7 +1920,7 @@
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoStudente_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gamage</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0023v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruchira</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riccardo</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1891,9 +1933,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoStudente_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoStudente_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericoRisparmiatoreoranga</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giorgio</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0024v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prabodha</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramona</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1906,9 +1948,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoCasa_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhushan</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maduro</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0025v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranga</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renzo</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1921,9 +1963,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoPersonale_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Mutuo_02"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoPersonale_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandaruwan</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neri</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0026v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yachitha</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberto</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1936,9 +1978,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoPersonale_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dissanayake</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maresi</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0027v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Udeshika</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odessa</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1951,9 +1993,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoCasa_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenericoRisparmiatorethi</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nina</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0028v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shamika</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azzurra</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1966,9 +2008,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoStudente_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Mutuo_03"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoStudente_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weerasinghe</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flepa</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0029v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Udari</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filo</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1981,9 +2023,9 @@
         <bancacarim:haContoDiPrestito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_04"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Mutuo_04"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoImprese_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hasarangi</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santi</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0030v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thilinika</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorella</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -1998,9 +2040,9 @@
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoCasa_04"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoPersonale_04"/>
         <bancacarim:haPagatoPer rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoSviluppo_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wijesekara</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lolli</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0031v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danodya</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniela</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2011,7 +2053,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendis</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaliya</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giada</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2021,8 +2063,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wickramasinghe</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranil</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manila</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranila</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2032,8 +2074,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhushan</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinushika</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferrara</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irene</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2043,8 +2085,19 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaluge</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eshani</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaluga</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esha</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_05">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
+        <bancacarim:cognome>Giannini</bancacarim:cognome>
+        <bancacarim:nome>Luca</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2056,7 +2109,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Bambino_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ran Kekulu</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Junior</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2070,7 +2123,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Bambino_02"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ran Kekulu</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Junior</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2084,7 +2137,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Bambino_03"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hapan</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Junior</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2098,29 +2151,9 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Bambino_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hapan</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Junior</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68000.0</bancacarim:saldo_conto>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBancario_01 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBancario_01">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario"/>
-        <bancacarim:appartieneA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_01"/>
-        <bancacarim:numero_assegno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_assegno>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBancario_02 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoBancario_02">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssegnoBancario"/>
-        <bancacarim:appartieneA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_08"/>
-        <bancacarim:numero_assegno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_assegno>
     </owl:NamedIndividual>
     
 
@@ -2133,7 +2166,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_01"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_02"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1533624.1</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2148,7 +2181,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36429.32</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2160,10 +2193,10 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_02"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_03"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">62485.32</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2175,10 +2208,10 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_01"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_01"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0005</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45823.21</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2193,7 +2226,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0006</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45932.01</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2206,7 +2239,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BocCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0007</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">948536.1</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2221,7 +2254,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_05"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NsbCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NbItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0008</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">569742.3</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2230,7 +2263,15 @@
 
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_09 -->
 
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_09"/>
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_09">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
+        <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_05"/>
+        <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NbItalia</bancacarim:nome_conto>
+        <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0009</bancacarim:numero_conto>
+        <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</bancacarim:saldo_conto>
+    </owl:NamedIndividual>
     
 
 
@@ -2242,7 +2283,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NsbCurrent</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NbItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0010</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">154863.25</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2280,7 +2321,7 @@
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boc_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiaoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2294,7 +2335,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boc_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiaoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2306,9 +2347,9 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_01"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boc_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiaoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2322,7 +2363,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boc_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiaoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0005</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">325000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2335,7 +2376,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boc_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiaoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0006</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2347,9 +2388,9 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_04"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nsb_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConvenienzaItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0008</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2364,7 +2405,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_05"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nsb_FD</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConvenienzaItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0009</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2379,7 +2420,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_01"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_02"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ithurum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RedditoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65874.25</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2394,7 +2435,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ithurum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RedditoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45932.24</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2406,11 +2447,11 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_02"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ithurum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RedditoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">785634.3</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2425,7 +2466,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_01"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ithurum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RedditoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0005</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34059.65</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2438,7 +2479,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ithurum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RedditoItalia</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0006</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15000.53</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2450,7 +2491,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_03"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinary</bancacarim:nome_conto>
@@ -2470,6 +2511,20 @@
         <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinary</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0008</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48536.32</bancacarim:saldo_conto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_09">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico"/>
+        <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_05"/>
+        <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinary</bancacarim:nome_conto>
+        <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0009</bancacarim:numero_conto>
+        <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
     
 
@@ -2512,7 +2567,7 @@
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_06"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NSB_Youth</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top_Youth</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65483.12</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2526,7 +2581,7 @@
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NSB_Youth</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top_Youth</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48593.21</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2538,11 +2593,11 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_01"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_01"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_02"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upahara</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SeniorPlus</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65495.63</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2554,11 +2609,11 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_02"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiCredito_02"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_01"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upahara</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SeniorPlus</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">46958.25</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2570,9 +2625,9 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_03"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_03"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pensioners</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pensionati</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9865000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -2584,86 +2639,12 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_04"/>
+        <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_04"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_05"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pensioners</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pensionati</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">785000.0</bancacarim:saldo_conto>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_01 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_01">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mudiyanse</bancacarim:cognome>
-        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0009v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siripala</bancacarim:nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_02 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_02">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singhore</bancacarim:cognome>
-        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0010v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sethan</bancacarim:nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_03 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_03">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shehan</bancacarim:cognome>
-        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00011v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awishaka</bancacarim:nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_04 -->
-
-    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_Citizen_04">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
-        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
-        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
-        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayawardana</bancacarim:cognome>
-        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0012v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamindu</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2674,7 +2655,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandun</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandro</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2685,7 +2666,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_02"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Silva</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kasun</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvia</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2695,8 +2676,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dissanayake</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amith</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luciani</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniele</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2706,8 +2687,19 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
         <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumaraseena</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asara</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiori</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniele</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
+        <bancacarim:cognome>Marzotta</bancacarim:cognome>
+        <bancacarim:nome>Mario</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2716,9 +2708,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_1">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kamal</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2729,7 +2721,7 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioSanMiniato"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nishantha</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josè</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2739,8 +2731,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_3">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hewage</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wathsala</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pacini</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ornella</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2841,7 +2833,7 @@
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_01"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">01</bancacarim:codice_filiale>
-        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moratuwa</bancacarim:zona_filiale>
+        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miramare</bancacarim:zona_filiale>
     </owl:NamedIndividual>
     
 
@@ -2854,7 +2846,7 @@
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_02"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_02"/>
         <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">02</bancacarim:codice_filiale>
-        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elpitiya</bancacarim:zona_filiale>
+        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucca</bancacarim:zona_filiale>
     </owl:NamedIndividual>
     
 
@@ -2867,7 +2859,7 @@
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_03"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
         <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">03</bancacarim:codice_filiale>
-        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kandy</bancacarim:zona_filiale>
+        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cesena centro</bancacarim:zona_filiale>
     </owl:NamedIndividual>
     
 
@@ -2879,8 +2871,21 @@
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_04"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_04"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:codice_filiale>
-        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kalutara</bancacarim:zona_filiale>
+        <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">04</bancacarim:codice_filiale>
+        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cesena Barriera</bancacarim:zona_filiale>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
+        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_05"/>
+        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_05"/>
+        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05"/>
+        <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">05</bancacarim:codice_filiale>
+        <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellariva</bancacarim:zona_filiale>
     </owl:NamedIndividual>
     
 
@@ -2900,7 +2905,7 @@
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samith</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0005v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rashan</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raffaele</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2915,9 +2920,9 @@
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_02"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_02"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_02"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rishan</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cristoforo</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0006v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samitha</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samanta</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2932,9 +2937,9 @@
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_09"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_08"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_09"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Udan</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uranio</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0007v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinuka</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniela</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2946,9 +2951,23 @@
         <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_08"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_08"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_08"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendis</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandela</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0008v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romesh</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romina</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore_05">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#GenericoRisparmiatore"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_09"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_09"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_09"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pironi</bancacarim:cognome>
+        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0009v</bancacarim:id_persona>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giulio</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -2968,7 +2987,7 @@
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendes</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0017v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shawn</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sara</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3000,9 +3019,9 @@
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_03"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_10"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_03"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandareka</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandella</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0019v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinthanie</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlotta</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3014,9 +3033,9 @@
         <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_04"/>
         <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_04"/>
         <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGiovani_04"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Athukorala</bancacarim:cognome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treviglio</bancacarim:cognome>
         <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0020v</bancacarim:id_persona>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poojanie</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polly</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3047,9 +3066,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samarasinghe</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimesh</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sammaritano</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nino</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3058,9 +3077,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balasinghe</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chalani</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calderoli</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariachiara</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3069,8 +3088,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kodithuwakku</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimeshika</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colli</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3080,7 +3099,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kalpani</bancacarim:nome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiara</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3090,8 +3109,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_05">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alwis</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chathura</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nanni</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igor</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3101,8 +3120,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale_06">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ManagerRegionale"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganeegoda</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chathurika</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DePaoli</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3115,7 +3134,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ransurakum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MutuoPerTe</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3130,7 +3149,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ransurakum</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MutuoPerTe</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3145,7 +3164,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_05"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RanSarana</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MutuoPerTe</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65823.01</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3160,7 +3179,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_06"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RanSarana</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BuyCasa</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32540.25</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3175,7 +3194,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niwahana</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RistrutturaCasa</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3190,7 +3209,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niwahana</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewHome</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">900000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3235,7 +3254,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_1"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atha hitha</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestSociety</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.9547827E9</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3250,7 +3269,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_1"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atha hitha</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestSociety</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.4859244E9</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3265,7 +3284,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_3"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_05"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoOperateFinance</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CooperativeFinance</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.875E7</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3280,7 +3299,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Direttore_3"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_06"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoOperateFinance</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CooperativeFinance</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6354000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3385,7 +3404,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_05"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NSB_Buddhi</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopBuddy</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">650000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3399,7 +3418,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_06"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NSB_Buddhi</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopBuddy</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">875000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3414,7 +3433,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saviya</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopSayer</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0001</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3429,7 +3448,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saviya</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TopSayer</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0002</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500000.0</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3444,7 +3463,7 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_05"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diriya</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DevelopmentTop</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0003</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65948.3</bancacarim:saldo_conto>
     </owl:NamedIndividual>
@@ -3459,9 +3478,83 @@
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_06"/>
         <bancacarim:prestitoApprovatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
-        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diriya</bancacarim:nome_conto>
+        <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DevelopmentTop</bancacarim:nome_conto>
         <bancacarim:numero_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0004</bancacarim:numero_conto>
         <bancacarim:saldo_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#float">426593.25</bancacarim:saldo_conto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_01">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_05"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_03"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_01"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maddi</bancacarim:cognome>
+        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0009v</bancacarim:id_persona>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonia</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_02">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente_03"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_03"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_02"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorenzetti</bancacarim:cognome>
+        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0010v</bancacarim:id_persona>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lidia</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_03">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoGenerico_07"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_03"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nardi</bancacarim:cognome>
+        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00011v</bancacarim:id_persona>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giuseppina</bancacarim:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Senior_Citizen_04">
+        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#SeniorRisparmiatore"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
+        <bancacarim:haContoDiDeposito rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
+        <bancacarim:haDepositatoSu rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoFisso_08"/>
+        <bancacarim:haPrelevatoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DepositoSenior_04"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardi</bancacarim:cognome>
+        <bancacarim:id_persona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0012v</bancacarim:id_persona>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorenzo</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3470,9 +3563,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayampathi</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandeera</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorrai</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emanuele</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3481,9 +3574,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_02">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
-        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#BancaCarimRimini"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hewage</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uthpala</bancacarim:nome>
+        <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim"/>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bardi</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franco</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3492,8 +3585,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_03">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Silva</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimmi</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dardi</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gianluca</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3502,8 +3595,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_04">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendis</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rukshan</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zandoli</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvia</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3513,8 +3606,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_05">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molligoda</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bathiya</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molliconi</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valter</bancacarim:nome>
     </owl:NamedIndividual>
     
 
@@ -3524,8 +3617,8 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore_06">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Vicedirettore"/>
         <bancacarim:èPersonaleManagerialeDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena"/>
-        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kodithuwakku</bancacarim:cognome>
-        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chalani</bancacarim:nome>
+        <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bertuccini</bancacarim:cognome>
+        <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiara</bancacarim:nome>
     </owl:NamedIndividual>
     
 
