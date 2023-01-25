@@ -9,8 +9,8 @@ Progetto per l'esame di Web Semantico, Università di Bologna, anno 2022
 * Aggiunta di regole SVRLM
 * Interrogazioni con SPARQL
 
-- Implementazione di una piccola app per eseguire le query con Apache Jena
-* App:
+Implementazione di una piccola app per eseguire le query con Apache Jena
+*App:
 
 * Back end implementato con Spring Boot
 * Apache Jena usata per eseguire le query con SPARQL e recuperare i dati delle ontologie
