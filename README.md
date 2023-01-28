@@ -1,4 +1,4 @@
-# Banca-Carim-ontology
+# Credite-Agricole-ontology
 
 Progetto per l'esame di Web Semantico, Università di Bologna, anno 2022
 
