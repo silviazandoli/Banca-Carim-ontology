@@ -1,7 +1,6 @@
 # Banca-Carim-ontology
 
 Progetto per l'esame di Web Semantico, Università di Bologna, anno 2022
-<img align="center" src="HomeBanca.PNG">
 
 - Realizzazione ontologia con Protège
 
@@ -15,5 +14,7 @@ Implementazione di una piccola app per eseguire le query con Apache Jena
 * Back end implementato con Spring Boot
 * Apache Jena usata per eseguire le query con SPARQL e recuperare i dati delle ontologie
 * Front end implementato con Angular
+
+<img align="center" src="HomeBanca.PNG">
 
 TODO: Quando hai consegnato e dato l'esame cambiare la visibilità a pubblica
