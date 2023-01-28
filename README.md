@@ -1,7 +1,7 @@
 # Banca-Carim-ontology
-Ontologia di una banca
 
 Progetto per l'esame di Web Semantico, Università di Bologna, anno 2022
+<img align="center" src="HomeBanca.PNG">
 
 - Realizzazione ontologia con Protège
 
