@@ -102,6 +102,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
+                    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
                     <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
                 </owl:unionOf>
             </owl:Class>
