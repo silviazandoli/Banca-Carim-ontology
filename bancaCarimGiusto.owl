@@ -1930,6 +1930,7 @@
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
+        <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_01"/>
         <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_01"/>
         <bancacarim:haPersonaleManageriale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#AssistenteDirettore_01"/>
