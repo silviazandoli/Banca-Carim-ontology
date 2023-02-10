@@ -732,6 +732,13 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#scadenza_carta"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1225,6 +1232,13 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#FermataAutobus -->
 
     <owl:Class rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#FermataAutobus">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#id_fermata"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Per semplicità, una fermata si identifica come sia di andata che di ritorno. Serve per capire quali fermate ci possono essere vicino a una filiale</rdfs:comment>
     </owl:Class>
     
@@ -2447,7 +2461,6 @@
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
         <bancacarim:contoApertoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
         <bancacarim:contoDiDepositoDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Giovane_03"/>
-        <bancacarim:contoGestitoDa rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_03"/>
         <bancacarim:haCarta rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CartaDiDebito_04"/>
         <bancacarim:haFiliale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:nome_conto rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NbItalia</bancacarim:nome_conto>
