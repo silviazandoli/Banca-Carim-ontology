@@ -5,7 +5,7 @@ Progetto per l'esame di Web Semantico, Università di Bologna, anno 2022
 - Realizzazione ontologia con Protège
 
 * RDF, RDFS e OWL
-* Aggiunta di regole SVRLM
+* Aggiunta di regole SWRL
 * Interrogazioni con SPARQL
 
 Implementazione di una piccola app per eseguire le query con Apache Jena
