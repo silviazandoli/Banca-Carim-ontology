@@ -1942,7 +1942,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioDiRiminiCarim">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_01"/>
@@ -1963,7 +1962,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioSanMiniato -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaDiRisparmioSanMiniato">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_02"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_02"/>
         <bancacarim:haCDM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#CDM_02"/>
@@ -1983,7 +1981,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#CassaRisparmioCesena">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Banca"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:consisteDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04"/>
         <bancacarim:haATM rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM_03"/>
@@ -3008,7 +3005,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_01 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_01">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#FermataAutobus"/>
         <bancacarim:vicinoA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:id_fermata rdf:datatype="http://www.w3.org/2001/XMLSchema#int">682</bancacarim:id_fermata>
         <bancacarim:numero_autobus rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</bancacarim:numero_autobus>
@@ -3019,7 +3015,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_02 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_02">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#FermataAutobus"/>
         <bancacarim:vicinoA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03"/>
         <bancacarim:id_fermata rdf:datatype="http://www.w3.org/2001/XMLSchema#int">182</bancacarim:id_fermata>
         <bancacarim:numero_autobus rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</bancacarim:numero_autobus>
@@ -3030,7 +3025,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_03 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Fermata_03">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#FermataAutobus"/>
         <bancacarim:vicinoA rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05"/>
         <bancacarim:id_fermata rdf:datatype="http://www.w3.org/2001/XMLSchema#int">678</bancacarim:id_fermata>
     </owl:NamedIndividual>
@@ -3040,7 +3034,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_01"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_01"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
@@ -3053,7 +3046,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_02 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_02">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_01"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_02"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_02"/>
@@ -3066,7 +3058,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_03">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_03"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_03"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_03"/>
@@ -3079,7 +3070,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_04">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_04"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_04"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_04"/>
@@ -3092,7 +3082,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_05">
-        <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_05"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_05"/>
         <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_05"/>
