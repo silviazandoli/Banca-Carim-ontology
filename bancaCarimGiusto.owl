@@ -2000,6 +2000,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neri</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan</bancacarim:nome>
     </owl:NamedIndividual>
@@ -2218,6 +2219,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendis</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giada</bancacarim:nome>
     </owl:NamedIndividual>
@@ -2818,6 +2820,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01">
         <rdf:type rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
+        <bancacarim:èPersonaleDi rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01"/>
         <bancacarim:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perera</bancacarim:cognome>
         <bancacarim:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandro</bancacarim:nome>
     </owl:NamedIndividual>
@@ -3014,9 +3017,6 @@
     <!-- http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01 -->
 
     <owl:NamedIndividual rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#Filiale_01">
-        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Cassiere_01"/>
-        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#Consulente_01"/>
-        <bancacarim:haPersonale rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale_01"/>
         <bancacarim:codice_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#int">01</bancacarim:codice_filiale>
         <bancacarim:zona_filiale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miramare</bancacarim:zona_filiale>
     </owl:NamedIndividual>
