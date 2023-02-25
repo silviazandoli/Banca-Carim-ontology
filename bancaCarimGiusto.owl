@@ -3907,25 +3907,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#customer">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#atmmachine">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#card">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="#currentaccount">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#customer">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#atmmachine">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#card">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#conto">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#filiale">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="#consulent">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="#custom">
@@ -3934,22 +3928,34 @@
     <rdf:Description rdf:about="#tit">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="#consulent">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="#docPersonal">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="#clerk">
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#conto">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="#cheque">
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#filiale">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="#leading">
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#consulent">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="#dir">
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#clerk">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="#docPers">
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#cheque">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#leading">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#dir">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.bancacarim.com/ontologie/bancacarim.owl#docPers">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -3964,7 +3970,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
-                        <swrl:argument1 rdf:resource="#currentaccount"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3974,8 +3980,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haContoDiDeposito"/>
-                                <swrl:argument1 rdf:resource="#customer"/>
-                                <swrl:argument2 rdf:resource="#currentaccount"/>
+                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3985,7 +3991,7 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ATM"/>
-                                        <swrl:argument1 rdf:resource="#atmmachine"/>
+                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#atmmachine"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3995,8 +4001,8 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haCarta"/>
-                                                <swrl:argument1 rdf:resource="#currentaccount"/>
-                                                <swrl:argument2 rdf:resource="#card"/>
+                                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
+                                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#card"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -4006,8 +4012,8 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#checkCarta"/>
-                                                        <swrl:argument1 rdf:resource="#atmmachine"/>
-                                                        <swrl:argument2 rdf:resource="#card"/>
+                                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#atmmachine"/>
+                                                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#card"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -4017,8 +4023,8 @@
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#checkSaldoATM"/>
-                                                                <swrl:argument1 rdf:resource="#atmmachine"/>
-                                                                <swrl:argument2 rdf:resource="#currentaccount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#atmmachine"/>
+                                                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4041,79 +4047,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haPrelevatoDa"/>
-                        <swrl:argument1 rdf:resource="#customer"/>
-                        <swrl:argument2 rdf:resource="#currentaccount"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">un conto corrente è gestito da un consulente della filiale a cui il conto appartiene</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
-                        <swrl:argument1 rdf:resource="#conto"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haFiliale"/>
-                                <swrl:argument1 rdf:resource="#conto"/>
-                                <swrl:argument2 rdf:resource="#filiale"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
-                                        <swrl:argument1 rdf:resource="#consulent"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haPersonale"/>
-                                                <swrl:argument1 rdf:resource="#filiale"/>
-                                                <swrl:argument2 rdf:resource="#consulent"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#contoGestitoDa"/>
-                        <swrl:argument1 rdf:resource="#conto"/>
-                        <swrl:argument2 rdf:resource="#consulent"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4232,6 +4167,77 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">un conto corrente è gestito da un consulente della filiale a cui il conto appartiene</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#conto"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haFiliale"/>
+                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#conto"/>
+                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#filiale"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulente"/>
+                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulent"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haPersonale"/>
+                                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#filiale"/>
+                                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulent"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#contoGestitoDa"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#conto"/>
+                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#consulent"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prelevamento da cassiere</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -4242,7 +4248,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
-                        <swrl:argument1 rdf:resource="#currentaccount"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -4252,8 +4258,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haContoDiDeposito"/>
-                                <swrl:argument1 rdf:resource="#customer"/>
-                                <swrl:argument2 rdf:resource="#currentaccount"/>
+                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -4263,7 +4269,7 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cassiere"/>
-                                        <swrl:argument1 rdf:resource="#clerk"/>
+                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#clerk"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -4273,8 +4279,8 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#checkSaldo"/>
-                                                <swrl:argument1 rdf:resource="#clerk"/>
-                                                <swrl:argument2 rdf:resource="#currentaccount"/>
+                                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#clerk"/>
+                                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4293,8 +4299,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haPrelevatoDa"/>
-                        <swrl:argument1 rdf:resource="#customer"/>
-                        <swrl:argument2 rdf:resource="#currentaccount"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4313,7 +4319,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#ContoCorrente"/>
-                        <swrl:argument1 rdf:resource="#currentaccount"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -4323,8 +4329,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haContoDiDeposito"/>
-                                <swrl:argument1 rdf:resource="#customer"/>
-                                <swrl:argument2 rdf:resource="#currentaccount"/>
+                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -4334,8 +4340,8 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#èAppartenutoA"/>
-                                        <swrl:argument1 rdf:resource="#cheque"/>
-                                        <swrl:argument2 rdf:resource="#currentaccount"/>
+                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cheque"/>
+                                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#currentaccount"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4352,8 +4358,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#emetteAssegno"/>
-                        <swrl:argument1 rdf:resource="#customer"/>
-                        <swrl:argument2 rdf:resource="#cheque"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#customer"/>
+                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#cheque"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4372,7 +4378,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#PrestitoPrivati"/>
-                        <swrl:argument1 rdf:resource="#leading"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#leading"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -4382,7 +4388,7 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#DirettoreFiliale"/>
-                                <swrl:argument1 rdf:resource="#dir"/>
+                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#dir"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -4392,8 +4398,8 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haFiliale"/>
-                                        <swrl:argument1 rdf:resource="#leading"/>
-                                        <swrl:argument2 rdf:resource="#filiale"/>
+                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#leading"/>
+                                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#filiale"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -4403,8 +4409,8 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#haPersonale"/>
-                                                <swrl:argument1 rdf:resource="#filiale"/>
-                                                <swrl:argument2 rdf:resource="#dir"/>
+                                                <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#filiale"/>
+                                                <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#dir"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -4414,8 +4420,8 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#deveSottomettere"/>
-                                                        <swrl:argument1 rdf:resource="#leading"/>
-                                                        <swrl:argument2 rdf:resource="#docPers"/>
+                                                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#leading"/>
+                                                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#docPers"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -4436,8 +4442,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#prestitoApprovatoDa"/>
-                        <swrl:argument1 rdf:resource="#leading"/>
-                        <swrl:argument2 rdf:resource="#dir"/>
+                        <swrl:argument1 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#leading"/>
+                        <swrl:argument2 rdf:resource="http://www.bancacarim.com/ontologie/bancacarim.owl#dir"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
