@@ -17,4 +17,3 @@ Implementazione di una piccola app per eseguire le query con Apache Jena
 
 <img align="center" src="HomeBanca.PNG">
 
-TODO: Quando hai consegnato e dato l'esame cambiare la visibilità a pubblica
